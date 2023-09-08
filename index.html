@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       To do App List
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1><center>Welcome to My To Do List App </center></h1>
+	<hr>  <div class="hano">
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();return validateDateOfAppointment()" autocomplete="off"  >
+                    <div>
+                        <label class="lbl">Activity Name*</label>
+                        <label class="validation-error hide" id="fullNameValidationError">
+                            This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+
+                        <label class="lbl">Date of Doing It</label>
+                        <input type="date" id="date"  name="date"  onselect="dateValidate()" required>
+
+            
+                    </div>
+                    <div>
+                        <label class="lbl">Number of Days or Month to do it</label>
+                        <input type="number" name="salary" id="salary" required>
+                    </div>
+                    <div>
+                        <label class="lbl">Category of Activity</label>
+                        <input type="text" name="city" id="city" required>
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Add To List"  onsubmit="validateDateOfAppointment()">
+                    </div>
+                </form>
+		</div>
+        <br>
+		
+		
+    </div>
+   
+    <div class = "employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    <th>Activity Name</th>
+                    <th>Date of Doing It</th>
+                    <th>Number of Days or Month to do it</th>
+                    <th>Category of Activity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
+<script src="script.js">
+    
+</script>
+</body>
+</html>
